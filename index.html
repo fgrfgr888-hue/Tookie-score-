@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tookie Score | دريسات كرة القدم</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            Tookie
+            <span>SCORE</span>
+        </a>
+
+        <nav>
+            <a href="#home">الرئيسية</a>
+            <a href="#leagues">الدوريات</a>
+            <a href="#kits">الدريسات</a>
+        </nav>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 السلة
+            <span id="cart-count">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <span class="small-title">
+                FOOTBALL • KITS • PASSION
+            </span>
+
+            <h1>
+                دريسك المفضل
+                <span>بمكان واحد.</span>
+            </h1>
+
+            <p>
+                اكتشف دريسات أشهر أندية الدوريات الأوروبية
+                واختر قميص ناديك المفضل.
+            </p>
+
+            <a href="#leagues" class="hero-btn">
+                تصفح الدريسات
+                <span>←</span>
+            </a>
+
+        </div>
+
+        <div class="hero-ball">
+            ⚽
+        </div>
+
+    </section>
+
+
+    <!-- LEAGUES -->
+
+    <section class="leagues-section" id="leagues">
+
+        <div class="section-title">
+
+            <span>TOP 5 LEAGUES</span>
+
+            <h2>
+                اختر الدوري
+            </h2>
+
+            <p>
+                اختار الدوري حتى تشوف أندية ودريسات الموسم
+            </p>
+
+        </div>
+
+
+        <div class="league-grid">
+
+            <button
+                class="league-card active"
+                onclick="selectLeague('premier', this)">
+
+                <div class="league-icon">
+                    🏴
+                </div>
+
+                <h3>الدوري الإنجليزي</h3>
+
+                <span>Premier League</span>
+
+            </button>
+
+
+            <button
+                class="league-card"
+                onclick="selectLeague('laliga', this)">
+
+                <div class="league-icon">
+                    🇪🇸
+                </div>
+
+                <h3>الدوري الإسباني</h3>
+
+                <span>La Liga</span>
+
+            </button>
+
+
+            <button
+                class="league-card"
+                onclick="selectLeague('seriea', this)">
+
+                <div class="league-icon">
+                    🇮🇹
+                </div>
+
+                <h3>الدوري الإيطالي</h3>
+
+                <span>Serie A</span>
+
+            </button>
+
+
+            <button
+                class="league-card"
+                onclick="selectLeague('bundesliga', this)">
+
+                <div class="league-icon">
+                    🇩🇪
+                </div>
+
+                <h3>الدوري الألماني</h3>
+
+                <span>Bundesliga</span>
+
+            </button>
+
+
+            <button
+                class="league-card"
+                onclick="selectLeague('ligue1', this)">
+
+                <div class="league-icon">
+                    🇫🇷
+                </div>
+
+                <h3>الدوري الفرنسي</h3>
+
+                <span>Ligue 1</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLUBS -->
+
+    <section class="clubs-section">
+
+        <div class="section-title small">
+
+            <span>SELECT YOUR CLUB</span>
+
+            <h2>
+                اختر النادي
+            </h2>
+
+        </div>
+
+        <div
+            id="clubs-container"
+            class="clubs-grid">
+        </div>
+
+    </section>
+
+
+    <!-- KITS -->
+
+    <section class="kits-section" id="kits">
+
+        <div class="section-title">
+
+            <span>OFFICIAL STYLE</span>
+
+            <h2>
+                دريسات النادي
+            </h2>
+
+            <p id="selected-club">
+                اختار نادي حتى تظهر الدريسات
+            </p>
+
+        </div>
+
+
+        <div
+            id="kits-container"
+            class="kits-grid">
+
+            <div class="empty-kits">
+
+                <div>👕</div>
+
+                <h3>
+                    اختار ناديك أولاً
+                </h3>
+
+                <p>
+                    راح تظهر هنا الدريسات المتوفرة
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CART -->
+
+    <div
+        id="cart-overlay"
+        class="cart-overlay"
+        onclick="closeCart(event)">
+
+        <div
+            class="cart"
+            onclick="event.stopPropagation()">
+
+            <div class="cart-header">
+
+                <div>
+
+                    <span>TOOKIE SCORE</span>
+
+                    <h2>
+                        سلة المشتريات
+                    </h2>
+
+                </div>
+
+                <button onclick="closeCart()">
+                    ✕
+                </button>
+
+            </div>
+
+
+            <div
+                id="cart-items"
+                class="cart-items">
+
+                <div class="empty-cart">
+
+                    <div>🛒</div>
+
+                    <p>
+                        السلة فارغة
+                    </p>
+
+                    <span>
+                        أضف دريسك المفضل
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="cart-footer">
+
+                <div class="total-row">
+
+                    <span>
+                        المجموع
+                    </span>
+
+                    <strong id="cart-total">
+                        0 د.ع
+                    </strong>
+
+                </div>
+
+                <button
+                    class="checkout-btn"
+                    onclick="checkout()">
+
+                    إتمام الطلب
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            Tookie
+            <span>SCORE</span>
+        </div>
+
+        <p>
+            كل فريق له قصة، وكل قميص يحكيها.
+        </p>
+
+        <small>
+            © 2026 Tookie Score
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
