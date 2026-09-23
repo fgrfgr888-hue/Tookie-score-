@@ -1,0 +1,1170 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #f8faf8;
+    color: #17241d;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    height: 78px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: white;
+
+    border-bottom: 1px solid #e3ebe5;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    text-decoration: none;
+
+    color: #102219;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    line-height: .8;
+
+}
+
+
+.logo span {
+
+    display: block;
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+    text-align: center;
+
+    color: #159447;
+
+    margin-top: 8px;
+
+}
+
+
+.navbar nav {
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.navbar nav a {
+
+    text-decoration: none;
+
+    color: #52645a;
+
+    font-size: 14px;
+
+    transition: .3s;
+
+}
+
+
+.navbar nav a:hover {
+
+    color: #159447;
+
+}
+
+
+.cart-btn {
+
+    border: none;
+
+    background: #e6f5eb;
+
+    color: #106b34;
+
+    padding: 11px 18px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+}
+
+
+#cart-count {
+
+    background: #159447;
+
+    color: white;
+
+    border-radius: 50%;
+
+    padding: 2px 7px;
+
+    font-size: 11px;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 570px;
+
+    padding: 70px 9%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #eaf7ee
+        );
+
+}
+
+
+.hero-content {
+
+    max-width: 600px;
+
+}
+
+
+.small-title {
+
+    color: #159447;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+}
+
+
+.hero h1 {
+
+    font-size: 65px;
+
+    line-height: 1.2;
+
+    margin: 20px 0;
+
+    font-weight: 900;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: #159447;
+
+}
+
+
+.hero p {
+
+    color: #63736a;
+
+    line-height: 2;
+
+    max-width: 500px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: #159447;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 27px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 25px
+        rgba(21,148,71,.18);
+
+    transition: .3s;
+
+}
+
+
+.hero-btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.hero-ball {
+
+    width: 350px;
+
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: #159447;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 150px;
+
+    box-shadow:
+        0 30px 60px
+        rgba(21,148,71,.25);
+
+}
+
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+
+    text-align: center;
+
+}
+
+
+.section-title span {
+
+    color: #159447;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    font-weight: 800;
+
+}
+
+
+.section-title h2 {
+
+    font-size: 38px;
+
+    margin: 10px 0;
+
+}
+
+
+.section-title p {
+
+    color: #78877e;
+
+    font-size: 14px;
+
+}
+
+
+.section-title.small {
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================
+   LEAGUES
+========================= */
+
+.leagues-section {
+
+    padding: 90px 7% 50px;
+
+}
+
+
+.league-grid {
+
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+
+}
+
+
+.league-card {
+
+    background: white;
+
+    border: 1px solid #e2ebe5;
+
+    border-radius: 15px;
+
+    padding: 25px 15px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    color: #1c3024;
+
+    transition: .3s;
+
+}
+
+
+.league-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #159447;
+
+}
+
+
+.league-card.active {
+
+    background: #159447;
+
+    color: white;
+
+    border-color: #159447;
+
+}
+
+
+.league-icon {
+
+    font-size: 35px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.league-card h3 {
+
+    font-size: 14px;
+
+}
+
+
+.league-card span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 9px;
+
+    opacity: .7;
+
+}
+
+
+/* =========================
+   CLUBS
+========================= */
+
+.clubs-section {
+
+    padding: 50px 7%;
+
+    background: white;
+
+}
+
+
+.clubs-grid {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.club-btn {
+
+    border: 1px solid #dce7df;
+
+    background: #f8faf8;
+
+    color: #304338;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+
+.club-btn:hover,
+
+.club-btn.active {
+
+    background: #159447;
+
+    color: white;
+
+    border-color: #159447;
+
+}
+
+
+/* =========================
+   KITS
+========================= */
+
+.kits-section {
+
+    padding: 90px 7%;
+
+}
+
+
+.kits-grid {
+
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.kit-card {
+
+    background: white;
+
+    border: 1px solid #e0e9e3;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: .3s;
+
+}
+
+
+.kit-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(20,70,40,.1);
+
+}
+
+
+.kit-image {
+
+    height: 350px;
+
+    background: #edf6f0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.kit-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.kit-label {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    background: #159447;
+
+    color: white;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.kit-info {
+
+    padding: 20px;
+
+}
+
+
+.kit-info span {
+
+    color: #159447;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+}
+
+
+.kit-info h3 {
+
+    margin: 7px 0;
+
+    font-size: 18px;
+
+}
+
+
+.kit-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+
+}
+
+
+.price {
+
+    color: #159447;
+
+    font-weight: 900;
+
+}
+
+
+.add-btn {
+
+    border: none;
+
+    background: #dff2e5;
+
+    color: #11743a;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 700;
+
+}
+
+
+.add-btn:hover {
+
+    background: #159447;
+
+    color: white;
+
+}
+
+
+.empty-kits {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    color: #7c8d82;
+
+}
+
+
+.empty-kits div {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =========================
+   CART
+========================= */
+
+.cart-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(10,30,18,.45);
+
+    z-index: 500;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+}
+
+
+.cart-overlay.open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.cart {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 420px;
+
+    max-width: 90%;
+
+    height: 100%;
+
+    background: white;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transform: translateX(-100%);
+
+    transition: .3s;
+
+}
+
+
+.cart-overlay.open .cart {
+
+    transform: translateX(0);
+
+}
+
+
+.cart-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #e4ebe6;
+
+}
+
+
+.cart-header span {
+
+    color: #159447;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.cart-header h2 {
+
+    font-size: 20px;
+
+    margin-top: 5px;
+
+}
+
+
+.cart-header button {
+
+    border: none;
+
+    background: #e7f3ea;
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+}
+
+
+.cart-items {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px 0;
+
+}
+
+
+.empty-cart {
+
+    text-align: center;
+
+    margin-top: 100px;
+
+    color: #7d8c83;
+
+}
+
+
+.empty-cart div {
+
+    font-size: 45px;
+
+}
+
+
+.empty-cart span {
+
+    font-size: 12px;
+
+}
+
+
+.cart-item {
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 10px;
+
+    margin-bottom: 12px;
+
+    background: #f7faf8;
+
+    border-radius: 12px;
+
+}
+
+
+.cart-item img {
+
+    width: 65px;
+
+    height: 75px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+}
+
+
+.cart-item-info {
+
+    flex: 1;
+
+}
+
+
+.cart-item-info h4 {
+
+    font-size: 13px;
+
+}
+
+
+.cart-item-info p {
+
+    color: #159447;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+
+}
+
+
+.quantity {
+
+    display: flex;
+
+    gap: 8px;
+
+    align-items: center;
+
+    margin-top: 6px;
+
+}
+
+
+.quantity button {
+
+    border: none;
+
+    background: #dcefe2;
+
+    width: 23px;
+
+    height: 23px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+}
+
+
+.remove {
+
+    border: none;
+
+    background: none;
+
+    color: #78877e;
+
+    cursor: pointer;
+
+}
+
+
+.cart-footer {
+
+    border-top: 1px solid #e4ebe6;
+
+    padding-top: 20px;
+
+}
+
+
+.total-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+
+}
+
+
+.total-row strong {
+
+    color: #159447;
+
+}
+
+
+.checkout-btn {
+
+    width: 100%;
+
+    border: none;
+
+    background: #159447;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-weight: 800;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #102219;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+
+}
+
+
+.footer-logo {
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+}
+
+
+.footer-logo span {
+
+    color: #37b86b;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    display: block;
+
+}
+
+
+footer p {
+
+    color: #a9b9ae;
+
+    margin: 12px;
+
+    font-size: 13px;
+
+}
+
+
+footer small {
+
+    color: #718077;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+    .navbar nav {
+
+        display: none;
+
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 25px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 48px;
+
+    }
+
+    .hero p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+    }
+
+    .hero-ball {
+
+        width: 270px;
+
+        height: 270px;
+
+        font-size: 100px;
+
+        margin-top: 50px;
+
+    }
+
+    .league-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+    .kits-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+    .league-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .kits-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .kit-image {
+
+        height: 330px;
+
+    }
+
+    .cart {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+}
